@@ -8,7 +8,7 @@ export const payloadHandler = (): Router => {
 };
 
 const processHandler = (req: Request, res: Response) => {
-  console.log(req.body.payload);
+  console.log(req.body);
   console.log(req.params.name);
   res.sendStatus(200);
 };
