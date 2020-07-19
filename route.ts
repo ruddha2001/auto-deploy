@@ -2,11 +2,13 @@ import { Request, Response, Router } from "express";
 const router = Router();
 
 export const payloadHandler = (): Router => {
-  router.get("/:name", processHandler);
+  router.post("/:name", processHandler);
 
   return router;
 };
 
 const processHandler = (req: Request, res: Response) => {
-  res.json({ name: req.params.name });
+  console.log(req.body.payload);
+  console.log(req.params.name);
+  res.sendStatus(200);
 };
