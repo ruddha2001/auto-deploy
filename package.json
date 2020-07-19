@@ -1,0 +1,13 @@
+{
+  "name": "auto-deploy",
+  "version": "1.0.0",
+  "main": "build/server.js",
+  "repository": "https://github.com/ruddha2001/auto-deploy.git",
+  "author": "Aniruddha Chatterjee <ruddha.mine@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "tsc",
+    "start": "node ./build/server.js",
+    "dev": "tsc && yarn start"
+  }
+}
