@@ -1,4 +1,4 @@
-require("dotenv").congif();
+require("dotenv").config();
 
 import express from "express";
 import cors from "cors";
@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/*", payloadHandler());
+app.use("/", payloadHandler());
 
-http.createServer(app).listen(parseInt(process.env.PORT!), function () {
+http.createServer(app).listen(process.env.PORT, function () {
   console.log("Server started at Port " + process.env.PORT);
 });
